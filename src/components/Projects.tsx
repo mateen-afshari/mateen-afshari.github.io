@@ -33,7 +33,7 @@ function Projects() {
     <div className="w-fit mx-auto">
       <h2 className="text-white text-5xl ml-10">Projects</h2>
       <div className="grid mt-5 grid-cols-1 mx-5 sm:grid-cols-3 gap-8 ">
-        {projects.map((project: Project, index: number) => (
+        {projects.map((project: Project) => (
           <div className="max-w-sm rounded shadow-lg bg-zinc-800">
             <img className="w-full" src="" alt="img" />
             <div className="px-6 py-4">

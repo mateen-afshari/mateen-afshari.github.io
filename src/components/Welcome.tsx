@@ -1,9 +1,8 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import myImage from "../assets/Mateen.png";
+
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, Image } from "react-bootstrap";
+
 function Welcome() {
   return (
     <div className="justify-center ">
