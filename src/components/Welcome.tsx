@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import myImage from "../assets/Mateen.png";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -7,7 +8,7 @@ function Welcome() {
   return (
     <div className="justify-center ">
       <div className=" w-80 h-80 bg-gradient-to-b from-teal-500 rounded-full overflow-hidden  mx-auto mb-10">
-        <img src="src/assets/Mateen.png" alt="" />
+        <img src={myImage} alt="" />
       </div>
       <div>
         <div className="pb-4 text-center">
