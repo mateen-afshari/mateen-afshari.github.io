@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function Welcome() {
   return (
-    <div className="justify-center ">
+    <div className="justify-center">
       <div className=" w-80 h-80 bg-gradient-to-b from-teal-500 rounded-full overflow-hidden  mx-auto mb-10">
         <img src={myImage} alt="" />
       </div>

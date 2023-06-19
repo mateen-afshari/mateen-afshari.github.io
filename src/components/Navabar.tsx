@@ -9,7 +9,15 @@ function Navbar() {
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (element) {
+      const { top } = element.getBoundingClientRect();
+      const offset =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      const targetScrollPosition = top + offset - 100;
+      window.scrollTo({ top: targetScrollPosition, behavior: "smooth" });
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -19,34 +27,30 @@ function Navbar() {
         <div className="flex h-16 px-3 sm:justify-center">
           <div className="flex ">
             <div className="hidden sm:flex justify-center gap-14 ">
-              <a
-                href="#about"
+              <button
                 onClick={() => scrollToSection("about")}
-                className="text-gray-300 hover:bg-gray-700 px-0 py-2 rounded-md text-lg font-medium my-auto"
+                className="text-gray-300 hover:bg-gray-700 px-5 py-2 rounded-md text-lg font-medium my-auto"
               >
                 About
-              </a>
-              <a
-                href="#projects"
+              </button>
+              <button
                 onClick={() => scrollToSection("projects")}
-                className="text-gray-300 hover:bg-gray-700 px-0 py-2 rounded-md text-lg font-medium my-auto"
+                className="text-gray-300 hover:bg-gray-700 px-5 py-2 rounded-md text-lg font-medium my-auto"
               >
                 Projects
-              </a>
-              <a
-                href="#experience"
+              </button>
+              <button
                 onClick={() => scrollToSection("experience")}
-                className="text-gray-300 hover:bg-gray-700 px-0 py-2 rounded-md text-lg font-medium my-auto"
+                className="text-gray-300 hover:bg-gray-700 px-5 py-2 rounded-md text-lg font-medium my-auto"
               >
                 Experience
-              </a>
-              <a
-                href="#contact"
+              </button>
+              <button
                 onClick={() => scrollToSection("contact")}
-                className="text-gray-300 hover:bg-gray-700 px-0 py-2 rounded-md text-lg font-medium my-auto"
+                className="text-gray-300 hover:bg-gray-700 px-5 py-2 rounded-md text-lg font-medium my-auto"
               >
                 Contact
-              </a>
+              </button>
             </div>
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
