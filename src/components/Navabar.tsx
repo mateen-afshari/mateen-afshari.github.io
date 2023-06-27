@@ -15,7 +15,7 @@ function Navbar() {
         window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop;
-      const targetScrollPosition = top + offset - 100;
+      const targetScrollPosition = top + offset - 120;
       window.scrollTo({ top: targetScrollPosition, behavior: "smooth" });
     }
     setIsMobileMenuOpen(false);

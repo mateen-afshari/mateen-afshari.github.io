@@ -7,12 +7,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function Welcome() {
   return (
     <div className="justify-center">
-      <div className=" w-80 h-80 bg-gradient-to-b from-teal-500 rounded-full overflow-hidden  mx-auto mb-10">
+      <div className=" w-80 h-80 bg-gradient-to-b from-blue-500 rounded-full overflow-hidden mx-auto mb-10">
         <img src={myImage} alt="" />
       </div>
       <div>
-        <div className="pb-4 text-center">
-          <h2 className="text-5xl text-white">Hey, I'm Mateen</h2>
+        <div className="pb-4 text-center h-fit">
+          <h2 className="text-white text-5xl">Hey, I'm Mateen</h2>
         </div>
 
         <p className="text-gray-400 text-center pb-10 px-3 max-w-xl mx-auto">
@@ -33,7 +33,7 @@ function Welcome() {
             <FontAwesomeIcon icon={faLinkedin} color="white" />
           </a>
           <button
-            className="bg-teal-500 hover:bg-teal-700 text-white px-3 rounded"
+            className="bg-blue-500 hover:bg-blue-700 text-white px-3 rounded"
             onClick={() => {
               window.open(
                 "https://drive.google.com/file/d/1Iq4odO9lZ_aF-0UM4VrAgY0KoXr9tc-Y/view?usp=drive_link",

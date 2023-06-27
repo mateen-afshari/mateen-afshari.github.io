@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navabar";
 import Welcome from "./components/Welcome";
 import Projects from "./components/Projects";
+import Experience from "./components/Experience";
 
 function App() {
   return (
@@ -14,8 +15,11 @@ function App() {
       <section id="projects" className="min-h-screen">
         <Projects />
       </section>
-      {/* <section id="experience">Experience section content</section> */}
-      {/* <section id="contact">Contact section content</section> */}
+      <section id="experience" className="min-h-screen">
+        <Experience />
+      </section>
+
+      <section id="contact">Contact section content</section>
     </div>
   );
 }
