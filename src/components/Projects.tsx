@@ -50,11 +50,14 @@ interface Project {
 
 function Projects() {
   return (
-    <div className="w-fit mx-auto">
+    <div className="w-fit mx-auto mb-15">
       <h2 className="text-white text-5xl ml-6">Projects</h2>
-      <div className="grid mt-5 grid-cols-1 mx-3 sm:grid-cols-3 gap-8 ">
+      <div className="grid mt-5 grid-cols-1 mx-3 sm:grid-cols-3 gap-x-8 gap-y-12">
         {projects.map((project: Project) => (
-          <div className="flex flex-col max-w-sm h-{100} rounded shadow-lg bg-zinc-800 justify-between">
+          <div
+            className="flex flex-col max-w-sm rounded shadow-lg bg-zinc-800 justify-between"
+            style={{ height: "660px" }}
+          >
             <div className="h-min">
               <img className="w-full max-h-80" src={project.image} alt="img" />
               <div className="px-6 py-4">

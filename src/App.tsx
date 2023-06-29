@@ -4,6 +4,7 @@ import Navbar from "./components/Navabar";
 import Welcome from "./components/Welcome";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
+import Socials from "./components/Socials";
 
 function App() {
   return (
@@ -12,14 +13,16 @@ function App() {
       <section id="about" className="bg-dark h-screen w-screen">
         <Welcome />
       </section>
-      <section id="projects" className="min-h-screen">
-        <Projects />
-      </section>
       <section id="experience" className="min-h-screen">
         <Experience />
       </section>
+      <section id="projects" className="min-h-screen">
+        <Projects />
+      </section>
 
-      <section id="contact">Contact section content</section>
+      <section id="socials" className="min-h-screen">
+        <Socials />
+      </section>
     </div>
   );
 }

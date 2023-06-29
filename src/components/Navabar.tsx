@@ -15,7 +15,11 @@ function Navbar() {
         window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop;
-      const targetScrollPosition = top + offset - 120;
+      if (id == "socials") {
+        var targetScrollPosition = top + offset;
+      } else {
+        var targetScrollPosition = top + offset - 120;
+      }
       window.scrollTo({ top: targetScrollPosition, behavior: "smooth" });
     }
     setIsMobileMenuOpen(false);
@@ -34,22 +38,22 @@ function Navbar() {
                 About
               </button>
               <button
-                onClick={() => scrollToSection("projects")}
-                className="text-gray-300 hover:bg-gray-700 px-5 py-2 rounded-md text-lg font-medium my-auto"
-              >
-                Projects
-              </button>
-              <button
                 onClick={() => scrollToSection("experience")}
                 className="text-gray-300 hover:bg-gray-700 px-5 py-2 rounded-md text-lg font-medium my-auto"
               >
                 Experience
               </button>
               <button
-                onClick={() => scrollToSection("contact")}
+                onClick={() => scrollToSection("projects")}
                 className="text-gray-300 hover:bg-gray-700 px-5 py-2 rounded-md text-lg font-medium my-auto"
               >
-                Contact
+                Projects
+              </button>
+              <button
+                onClick={() => scrollToSection("socials")}
+                className="text-gray-300 hover:bg-gray-700 px-5 py-2 rounded-md text-lg font-medium my-auto"
+              >
+                Socials
               </button>
             </div>
           </div>
@@ -129,7 +133,7 @@ function Navbar() {
               onClick={() => scrollToSection("contact")}
               className="text-gray-300 hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
             >
-              Contact
+              Socials
             </a>
           </div>
         </div>
