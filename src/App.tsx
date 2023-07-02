@@ -13,7 +13,7 @@ function App() {
       <section id="about" className="bg-dark h-screen w-screen">
         <Welcome />
       </section>
-      <section id="experience" className="min-h-screen">
+      <section id="experience" className="min-h-screen mb-52 sm: mb-0">
         <Experience />
       </section>
       <section id="projects" className="min-h-screen">

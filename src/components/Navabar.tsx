@@ -8,20 +8,34 @@ function Navbar() {
   };
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const { top } = element.getBoundingClientRect();
-      const offset =
-        window.pageYOffset ||
-        document.documentElement.scrollTop ||
-        document.body.scrollTop;
-      if (id == "socials") {
-        var targetScrollPosition = top + offset;
+    if (id == "socials") {
+      var yOffset = 0;
+    } else {
+      if (window.innerWidth < 760) {
+        yOffset = -300;
       } else {
-        var targetScrollPosition = top + offset - 120;
+        yOffset = -120;
       }
-      window.scrollTo({ top: targetScrollPosition, behavior: "smooth" });
     }
+
+    const element = document.getElementById(id);
+    const y =
+      element!.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
+    // if (element) {
+    //   const { top } = element.getBoundingClientRect();
+    //   const offset =
+    //     window.pageYOffset ||
+    //     document.documentElement.scrollTop ||
+    //     document.body.scrollTop;
+    //   if (id == "socials") {
+    //     var targetScrollPosition = top + offset;
+    //   } else {
+    //     var targetScrollPosition = top;
+    //   }
+    //   window.scrollTo({ top: targetScrollPosition, behavior: "smooth" });
+    // }
     setIsMobileMenuOpen(false);
   };
 
@@ -108,29 +122,26 @@ function Navbar() {
         <div className="sm:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1">
             <a
-              href="#about"
               onClick={() => scrollToSection("about")}
               className="text-gray-300 hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
             >
               About
             </a>
             <a
-              href="#projects"
-              onClick={() => scrollToSection("projects")}
-              className="text-gray-300 hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Projects
-            </a>
-            <a
-              href="#experience"
               onClick={() => scrollToSection("experience")}
               className="text-gray-300 hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
             >
               Experience
             </a>
             <a
-              href="#contact"
-              onClick={() => scrollToSection("contact")}
+              onClick={() => scrollToSection("projects")}
+              className="text-gray-300 hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Projects
+            </a>
+
+            <a
+              onClick={() => scrollToSection("socials")}
               className="text-gray-300 hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
             >
               Socials
