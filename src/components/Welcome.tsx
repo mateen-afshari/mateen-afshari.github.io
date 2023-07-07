@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function Welcome() {
   return (
     <div className="justify-center">
-      <div className=" w-80 h-80 animate-text bg-gradient-to-b from-blue-500 via-purple-500 to-orange-500 rounded-full overflow-hidden mx-auto mb-10">
+      <div className=" w-80 h-80 animate-text bg-gradient-to-b from-blue-500 via-sky-500 to-teal-500 rounded-full overflow-hidden mx-auto mb-10">
         <img src={myImage} alt="" />
       </div>
       <div>
@@ -36,7 +36,7 @@ function Welcome() {
             className="bg-sky-500 hover:bg-sky-600 text-white px-3 rounded"
             onClick={() => {
               window.open(
-                "https://drive.google.com/file/d/1Iq4odO9lZ_aF-0UM4VrAgY0KoXr9tc-Y/view?usp=drive_link",
+                "https://drive.google.com/file/d/16KJbh1qVBAhOi_M6TyMnxDWFbXbevHeO/view?usp=sharing",
                 "_blank"
               );
             }}

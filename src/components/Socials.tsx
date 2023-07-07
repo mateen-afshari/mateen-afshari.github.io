@@ -7,6 +7,7 @@ function Socials() {
       <div className="my-12 flex flex-col md:flex-row justify-center">
         <a
           href="https://github.com/mateen-afshari"
+          target="_blank"
           className="justify-center text-center mx-2 my-4 md:my-0 flex items-center px-6 py-3 rounded-full border border-zinc-500 text-zinc-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white hover:-translate-y-1 ease-in-out duration-200"
         >
           <svg
@@ -25,6 +26,7 @@ function Socials() {
         </a>
         <a
           href="https://www.linkedin.com/in/mateen-afshari-90598022b/"
+          target="_blank"
           className="justify-center text-center mx-2 my-4 md:my-0 flex items-center px-6 py-3 rounded-full border border-zinc-500 text-zinc-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white hover:-translate-y-1 ease-in-out duration-200"
         >
           <svg
@@ -43,6 +45,7 @@ function Socials() {
         </a>
         <a
           href="mailto:ma8dc@virgina.edu"
+          target="_blank"
           className="justify-center text-center mx-2 my-4 md:my-0 flex items-center px-6 py-3 rounded-full border border-zinc-500 text-zinc-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white hover:-translate-y-1 ease-in-out duration-200"
         >
           <svg
@@ -61,7 +64,8 @@ function Socials() {
           Email
         </a>
         <a
-          href="https://drive.google.com/file/d/1Iq4odO9lZ_aF-0UM4VrAgY0KoXr9tc-Y/view"
+          href="https://drive.google.com/file/d/16KJbh1qVBAhOi_M6TyMnxDWFbXbevHeO/view?usp=sharing"
+          target="_blank"
           className="justify-center text-center mx-2 my-4 md:my-0 flex items-center px-6 py-3 rounded-full border border-zinc-500 text-zinc-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white hover:-translate-y-1 ease-in-out duration-200"
         >
           <svg
