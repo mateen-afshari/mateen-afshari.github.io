@@ -2,8 +2,14 @@ const WorkExperience = () => {
   return (
     <div className="w-fit mx-auto  my-20">
       <h2 className="text-white text-5xl ml-6">Experience</h2>
-      <div className="grid grid-cols-1 mt-5 mx-3 sm:grid-cols-3 gap-8">
-        <div className="max-w-sm bg-zinc-800 rounded-lg shadow-lg p-6 ">
+      <div className="grid grid-cols-1 mt-5 mx-3 lg:grid-cols-3 gap-8">
+        <div
+          className="max-w-sm bg-zinc-800 rounded-lg p-6 hover:shadow-neon ease-in-out duration-200"
+          onClick={() => {
+            window.open("https://roommebydsb.com/", "_blank");
+          }}
+          style={{ cursor: "pointer", minHeight: "516px" }}
+        >
           <h3 className="text-xl font-semibold text-white mb-2">
             Software Engineer, RoomMe
           </h3>
@@ -35,7 +41,16 @@ const WorkExperience = () => {
             Visit Website
           </a>
         </div>
-        <div className="flex flex-col justify-between max-w-sm bg-zinc-800 rounded-lg shadow-lg p-6">
+        <div
+          onClick={() => {
+            window.open(
+              "https://cyberinnovation.virginia.edu/va-cyber-navigator-internship-program",
+              "_blank"
+            );
+          }}
+          style={{ cursor: "pointer", minHeight: "516px" }}
+          className="flex flex-col justify-between max-w-sm bg-zinc-800 rounded-lg  p-6 animate-scroll-in hover:shadow-neon ease-in-out duration-200"
+        >
           <div>
             <h3 className="text-xl font-semibold text-white mb-2">
               Cybersecurity Intern, VA-CNIP
@@ -66,7 +81,16 @@ const WorkExperience = () => {
             Visit Website
           </a>
         </div>
-        <div className="flex flex-col max-w-sm bg-zinc-800 rounded-lg shadow-lg p-6 justify-between">
+        <div
+          onClick={() => {
+            window.open(
+              "https://www.globalteachingproject.com/about-us/",
+              "_blank"
+            );
+          }}
+          style={{ cursor: "pointer", minHeight: "516px" }}
+          className="flex flex-col max-w-sm bg-zinc-800 rounded-lg p-6 justify-between hover:shadow-neon ease-in-out duration-200"
+        >
           <div>
             <h3 className="text-xl font-semibold text-white mb-2">
               Teacher, Global Teaching Project
