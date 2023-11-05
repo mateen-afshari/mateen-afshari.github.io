@@ -40,7 +40,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-dark sticky top-0 z-50 shadow-lg mb-14">
+    <nav className="bg-dark sticky top-0 z-50 shadow-lg ">
       <div className="max-w-7xl mx-auto">
         <div className="flex h-16 px-3 sm:justify-center">
           <div className="flex ">
