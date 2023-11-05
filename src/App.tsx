@@ -5,7 +5,6 @@ import Welcome from "./components/Welcome";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Socials from "./components/Socials";
-import TechnologyList from "./components/Tech";
 import Skills from "./components/Skills";
 
 function App() {
