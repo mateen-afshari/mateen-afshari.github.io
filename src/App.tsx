@@ -9,11 +9,11 @@ import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div className="bg-dark">
+    <div className="bg-dark ">
       <Navbar />
       <section
         id="about"
-        className="flex items-center justify-center h-screen w-screen bg-dark"
+        className="flex items-center justify-center min-h-screen w-screen bg-dark"
       >
         <Welcome />
       </section>

@@ -6,13 +6,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function Welcome() {
   return (
-    <div className="justify-center pb-14 px-5">
-      <div className=" w-80 h-80 animate-text bg-gradient-to-b from-blue-500 via-sky-500 to-teal-500 rounded-full overflow-hidden mx-auto mb-10">
+    <div className="pb-14 align-middle">
+      <div className="w-72 h-72 animate-text bg-gradient-to-b from-blue-500 via-sky-500 to-teal-500 rounded-full overflow-hidden mx-auto mb-10 sm:w-80 sm:h-80">
         <img src={myImage} alt="" />
       </div>
-      <div>
-        <div className="pb-4 text-center h-fit">
-          <h2 className="text-white text-5xl">Hey, I'm Mateen</h2>
+      <div className="w-screen justify-center ">
+        <div className="pb-4 text-center h-fit ">
+          <h2 className="text-white text-5xl ">Hey, I'm Mateen</h2>
         </div>
 
         <p className="text-gray-400 text-center pb-10 px-3 max-w-xl mx-auto">
@@ -22,7 +22,7 @@ function Welcome() {
           with friends.
         </p>
 
-        <div className="text-5xl flex justify-center gap-10">
+        <div className="text-5xl flex justify-center gap-10 pb-10 sm:pb-0">
           <a href="https://github.com/mateen-afshari" target="_blank">
             <FontAwesomeIcon icon={faGithub} color="white" />
           </a>
