@@ -1,6 +1,6 @@
 const WorkExperience = () => {
   return (
-    <div className="w-fit mx-auto  my-20">
+    <div className="w-fit mx-auto  my-20 px-3">
       <h2 className="text-white text-5xl ml-6">Experience</h2>
       <div className="grid grid-cols-1 mt-5 mx-3 lg:grid-cols-3 gap-8">
         <div

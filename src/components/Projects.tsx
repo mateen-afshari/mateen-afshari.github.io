@@ -50,7 +50,7 @@ interface Project {
 
 function Projects() {
   return (
-    <div className="w-fit mx-auto">
+    <div className="w-fit mx-auto px-3">
       <h2 className="text-white text-5xl ml-6">Projects</h2>
       <div className="grid mt-5 grid-cols-1 mx-3 lg:grid-cols-3 gap-x-8 gap-y-12">
         {projects.map((project: Project) => (

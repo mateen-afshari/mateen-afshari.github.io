@@ -3,16 +3,31 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import myImage from "../assets/Mateen.png";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import { TypewriterEffectSmooth } from "./TypeWriterEffect";
 
 function Welcome() {
+  const words = [
+    {
+      text: "Hey,",
+      className: " text-white",
+    },
+    {
+      text: "I'm",
+      className: " text-white",
+    },
+    {
+      text: "Mateen",
+      className: " text-white",
+    },
+  ];
   return (
     <div className="pb-14 align-middle">
       <div className="w-72 h-72 animate-text bg-gradient-to-b from-blue-500 via-sky-500 to-teal-500 rounded-full overflow-hidden mx-auto mb-10 sm:w-80 sm:h-80">
         <img src={myImage} alt="" />
       </div>
       <div className="w-screen justify-center ">
-        <div className="pb-4 text-center h-fit ">
-          <h2 className="text-white text-5xl ">Hey, I'm Mateen</h2>
+        <div className="flex pb-4 items-center justify-center h-fit ">
+          <TypewriterEffectSmooth words={words} />
         </div>
 
         <p className="text-gray-400 text-center pb-10 px-3 max-w-xl mx-auto">
@@ -65,7 +80,7 @@ function Welcome() {
             </div>
           </button> */}
           <a
-            href="https://drive.google.com/file/d/16KJbh1qVBAhOi_M6TyMnxDWFbXbevHeO/view?usp=sharing"
+            href="https://drive.google.com/file/d/1m-c1vka6yTKufUZIWYIfbAa5c7qifHa6/view?usp=sharing"
             target="_blank"
             className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-sky-600 transition duration-300 ease-out border-2 border-sky-500 rounded-full shadow-md group"
           >
