@@ -1,3 +1,7 @@
+import roommeLogo from "../assets/RoomMeLogo.png";
+import microstrategyLogo from "../assets/microstrategy.png";
+import globalTeachingProjectLogo from "../assets/globalteachingproject.jpeg";
+import vacnipLogo from "../assets/vacnip.png";
 const WorkExperience = () => {
   return (
     <section className="py-24">
@@ -17,8 +21,7 @@ const WorkExperience = () => {
         <div className="rounded-lg border-0-0 bg-zinc-800 p-6 shadow-sm transition-all hover:shadow-md">
           <div className="flex items-center gap-4">
             <img
-              src="src/assets/microstrategy.png
-                "
+              src={microstrategyLogo}
               alt="Company Logo"
               width={48}
               height={48}
@@ -55,7 +58,7 @@ const WorkExperience = () => {
         <div className="rounded-lg border-0 bg-zinc-800 p-6 shadow-sm transition-all hover:shadow-md">
           <div className="flex items-center gap-4">
             <img
-              src="src/assets/RoomMeLogo.png"
+              src={roommeLogo}
               alt="Company Logo"
               width={48}
               height={48}
@@ -89,7 +92,7 @@ const WorkExperience = () => {
         <div className="rounded-lg border-0 bg-zinc-800 p-6 shadow-sm transition-all hover:shadow-md">
           <div className="flex items-center gap-4">
             <img
-              src="src/assets/globalteachingproject.jpeg"
+              src={globalTeachingProjectLogo}
               alt="Company Logo"
               width={48}
               height={48}
@@ -118,7 +121,7 @@ const WorkExperience = () => {
         <div className="rounded-lg border-0 bg-zinc-800 p-6 shadow-sm transition-all hover:shadow-md">
           <div className="flex items-center gap-4">
             <img
-              src="src/assets/vacnip.png"
+              src={vacnipLogo}
               alt="Company Logo"
               width={48}
               height={48}
