@@ -1,6 +1,6 @@
 function Socials() {
   return (
-    <div className="max-w-screen-lg px-4 mx-auto flex flex-col justify-center min-h-screen">
+    <div className=" mx-auto flex flex-col justify-center min-h-screen">
       <div className="pb-8 text-center">
         <h2 className="text-5xl pt-1 text-zinc-100 font-bold">Socials</h2>
       </div>
@@ -64,7 +64,7 @@ function Socials() {
           Email
         </a>
         <a
-          href="https://drive.google.com/file/d/1m-c1vka6yTKufUZIWYIfbAa5c7qifHa6/view?usp=sharing"
+          href="https://drive.google.com/file/d/1Z9jMAlcQclmD43QNLHjB-GdLohiiez-z/view?usp=sharing"
           target="_blank"
           className="justify-center text-center mx-2 my-4 md:my-0 flex items-center px-6 py-3 rounded-full border border-zinc-500 text-zinc-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white hover:-translate-y-1 ease-in-out duration-200"
         >

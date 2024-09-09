@@ -50,8 +50,19 @@ interface Project {
 
 function Projects() {
   return (
-    <div className="w-fit mx-auto px-3">
-      <h2 className="text-white text-5xl ml-6">Projects</h2>
+    <div className="w-fit mx-auto px-3 mb-24">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="space-y-2">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+              Projects
+            </h2>
+            <p className="max-w-[900px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              Check out some of the projects I've worked on
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="grid mt-5 grid-cols-1 mx-3 lg:grid-cols-3 gap-x-8 gap-y-12">
         {projects.map((project: Project) => (
           <div

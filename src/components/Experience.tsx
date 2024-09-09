@@ -1,119 +1,153 @@
 const WorkExperience = () => {
   return (
-    <div className="w-fit mx-auto  my-20 px-3">
-      <h2 className="text-white text-5xl ml-6">Experience</h2>
-      <div className="grid grid-cols-1 mt-5 mx-3 lg:grid-cols-3 gap-8">
-        <div
-          className="max-w-sm bg-zinc-800 rounded-lg p-6 hover:shadow-neon ease-in-out duration-200"
-          onClick={() => {
-            window.open("https://roommebydsb.com/", "_blank");
-          }}
-          style={{ cursor: "pointer", minHeight: "516px" }}
-        >
-          <h3 className="text-xl font-semibold text-white mb-2">
-            Software Engineer, RoomMe
-          </h3>
-          <p className="text-gray-400">
-            Charlottesville, VA | May 2023 - Present
-          </p>
-          <ul className="list-disc  text-gray-300 mt-4">
-            <li className="mb-2">
+    <section className="py-24">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="space-y-2">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+              Experience
+            </h2>
+            <p className="max-w-[900px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              See my impact across various roles
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className=" grid max-w-[1400px] grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-12 mx-auto px-12 xl:px-0">
+        <div className="rounded-lg border-0-0 bg-zinc-800 p-6 shadow-sm transition-all hover:shadow-md">
+          <div className="flex items-center gap-4">
+            <img
+              src="src/assets/microstrategy.png
+                "
+              alt="Company Logo"
+              width={48}
+              height={48}
+              className="rounded-md"
+              style={{ aspectRatio: "48/48", objectFit: "cover" }}
+            />
+            <div>
+              <h3 className="text-lg font-semibold text-white">
+                Microstrategy
+              </h3>
+              <p className="text-sm text-gray-400">Software Engineer Intern</p>
+            </div>
+          </div>
+          <div className="mt-4 text-sm text-gray-400">
+            <p>May 2024 - August 2024</p>
+            <p>Tysons, VA</p>
+          </div>
+          <ul className="mt-4 space-y-2 text-sm text-gray-400">
+            <li>
+              Developed and implemented an AI-powered assistant to automate the
+              creation of advanced metrics, achieving over 80% partial accuracy
+              and significantly improving data analysis efficiency and accuracy
+              for business intelligence reports.
+            </li>
+
+            <li>
+              Implemented retrieval augmented generation (RAG) models to enhance
+              the assistant's ability to generate natural language explanations
+              for complex metrics, improving user understanding and trust in the
+              generated insights.
+            </li>
+          </ul>
+        </div>
+        <div className="rounded-lg border-0 bg-zinc-800 p-6 shadow-sm transition-all hover:shadow-md">
+          <div className="flex items-center gap-4">
+            <img
+              src="src/assets/RoomMeLogo.png"
+              alt="Company Logo"
+              width={48}
+              height={48}
+              className="rounded-md"
+              style={{ aspectRatio: "48/48", objectFit: "cover" }}
+            />
+            <div>
+              <h3 className="text-lg font-semibold text-white">RoomMe</h3>
+              <p className="text-sm text-gray-400">Software Engineer</p>
+            </div>
+          </div>
+          <div className="mt-4 text-sm text-gray-400">
+            <p>May 2023 - March 2024</p>
+            <p>Charlottesville, VA</p>
+          </div>
+          <ul className="mt-4 space-y-2 text-sm text-gray-400">
+            <li>
+              Constructed and implemented a dynamic marketing script, enabling
+              daily outreach to a diverse audience of 18,000 individuals. This
+              no cost solution resulted in a 400% increase in total followers
+              and bolstered brand loyalty and engagement, contributing
+              significantly to our company's growth.
+            </li>
+            <li>
               Developed and maintained mobile applications using the Flutter
               framework and Firebase backend, ensuring smooth performance and
               seamless user experience across multiple platforms.
             </li>
-            <li className="mb-2">
-              Utilized Firebase services, such as Cloud Firestore and
-              Authentication, to implement real-time data synchronization and
-              secure user authentication for mobile applications.
-            </li>
-            <li className="mb-2">
-              Integrated GCP services, such as Cloud Functions and Cloud
-              Pub/Sub, to enable event-driven functionality and messaging
-              capabilities.
+          </ul>
+        </div>
+        <div className="rounded-lg border-0 bg-zinc-800 p-6 shadow-sm transition-all hover:shadow-md">
+          <div className="flex items-center gap-4">
+            <img
+              src="src/assets/globalteachingproject.jpeg"
+              alt="Company Logo"
+              width={48}
+              height={48}
+              className="rounded-md"
+              style={{ aspectRatio: "48/48", objectFit: "cover" }}
+            />
+            <div>
+              <h3 className="text-lg font-semibold text-white">
+                Global Teaching Project
+              </h3>
+              <p className="text-sm text-gray-400">Teaching Assistant</p>
+            </div>
+          </div>
+          <div className="mt-4 text-sm text-gray-400">
+            <p>June 2019 - August 2019</p>
+            <p>Los Angeles, CA</p>
+          </div>
+          <ul className="mt-4 space-y-2 text-sm text-gray-400">
+            <li>
+              Collaborated with the Global Teaching Project to deliver advanced
+              computer science coursework to students and schools in communities
+              where teacher shortages are most acute.
             </li>
           </ul>
-          <a
-            href="https://roommebydsb.com/"
-            target="_blank"
-            className="text-blue-400 hover:text-blue-300 mt-4 inline-block"
-          >
-            Visit Website
-          </a>
         </div>
-        <div
-          onClick={() => {
-            window.open(
-              "https://cyberinnovation.virginia.edu/va-cyber-navigator-internship-program",
-              "_blank"
-            );
-          }}
-          style={{ cursor: "pointer", minHeight: "516px" }}
-          className="flex flex-col justify-between max-w-sm bg-zinc-800 rounded-lg  p-6 animate-scroll-in hover:shadow-neon ease-in-out duration-200"
-        >
-          <div>
-            <h3 className="text-xl font-semibold text-white mb-2">
-              Cybersecurity Intern, VA-CNIP
-            </h3>
-            <p className="text-gray-400">
-              Charlottesville, VA | June 2023 - August 2023
-            </p>
-            <ul className="list-disc text-gray-300 mt-4">
-              <li className="mb-2">
-                Conducted comprehensive risk assessments of registrar
-                information systems, identifying vulnerabilities and
-                recommending appropriate security measures to improve
-                cybersecurity posture and mitigate potential threats.
-              </li>
-              <li className="mb-2">
-                Assisted in the configuration and deployment of security
-                software, ensuring compliance with industry best practices and
-                standards to enhance the overall security of local registrar
-                offices' systems.
-              </li>
-            </ul>
+        <div className="rounded-lg border-0 bg-zinc-800 p-6 shadow-sm transition-all hover:shadow-md">
+          <div className="flex items-center gap-4">
+            <img
+              src="src/assets/vacnip.png"
+              alt="Company Logo"
+              width={48}
+              height={48}
+              className="rounded-md"
+              style={{ aspectRatio: "48/48", objectFit: "cover" }}
+            />
+            <div>
+              <h3 className="text-lg font-semibold text-white">VA-CNIP</h3>
+              <p className="text-sm text-gray-400">Cybersecurity Intern</p>
+            </div>
           </div>
-          <a
-            href="https://cyberinnovation.virginia.edu/va-cyber-navigator-internship-program"
-            target="_blank"
-            className="text-blue-400 hover:text-blue-300 mt-4 inline-block"
-          >
-            Visit Website
-          </a>
-        </div>
-        <div
-          onClick={() => {
-            window.open(
-              "https://www.globalteachingproject.com/about-us/",
-              "_blank"
-            );
-          }}
-          style={{ cursor: "pointer", minHeight: "516px" }}
-          className="flex flex-col max-w-sm bg-zinc-800 rounded-lg p-6 justify-between hover:shadow-neon ease-in-out duration-200"
-        >
-          <div>
-            <h3 className="text-xl font-semibold text-white mb-2">
-              Teacher, Global Teaching Project
-            </h3>
-            <p className="text-gray-400">October 2022 - Present</p>
-            <ul className="list-disc  text-gray-300 mt-4">
-              <li className="mb-2">
-                Collaborated with the Global Teaching Project to deliver
-                advanced computer science coursework to students and schools in
-                communities where teacher shortages are most acute.
-              </li>
-            </ul>
+          <div className="mt-4 text-sm text-gray-400">
+            <p>June 2023 - August 2023</p>
+            <p>Charlottesville, VA</p>
           </div>
-          <a
-            href="https://www.globalteachingproject.com/about-us/"
-            target="_blank"
-            className="text-blue-400 hover:text-blue-300 mt-4 inline-block"
-          >
-            Visit Website
-          </a>
+          <ul className="mt-4 space-y-2 text-sm text-gray-400">
+            <li>
+              Increased adherence to the LESS standards from 86.8% to nearly
+              100%.
+            </li>
+            <li>
+              Configured and deployed security software, ensuring compliance
+              with industry best practices and standards to enhance the overall
+              security of local registrar offices' systems.
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
