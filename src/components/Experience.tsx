@@ -108,7 +108,7 @@ const WorkExperience = () => {
           </div>
           <div className="mt-4 text-sm text-gray-400">
             <p>June 2019 - August 2019</p>
-            <p>Los Angeles, CA</p>
+            <p>Charlottesville, VA</p>
           </div>
           <ul className="mt-4 space-y-2 text-sm text-gray-400">
             <li>
