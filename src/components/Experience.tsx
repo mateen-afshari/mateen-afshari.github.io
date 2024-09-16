@@ -11,13 +11,13 @@ const WorkExperience = () => {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
               Experience
             </h2>
-            <p className="max-w-[900px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            <p className=" text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
               See my impact across various roles
             </p>
           </div>
         </div>
       </div>
-      <div className=" grid max-w-[1400px] grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-12 mx-auto px-12 xl:px-0">
+      <div className=" grid container grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-12 mx-auto px-12 xl:px-0">
         <div className="rounded-lg border-0-0 bg-zinc-800 p-6 shadow-sm transition-all hover:shadow-md">
           <div className="flex items-center gap-4">
             <img
@@ -107,7 +107,7 @@ const WorkExperience = () => {
             </div>
           </div>
           <div className="mt-4 text-sm text-gray-400">
-            <p>June 2019 - August 2019</p>
+            <p>October 2022 - May 2024</p>
             <p>Charlottesville, VA</p>
           </div>
           <ul className="mt-4 space-y-2 text-sm text-gray-400">

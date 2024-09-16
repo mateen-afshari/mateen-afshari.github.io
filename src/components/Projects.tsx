@@ -2,6 +2,8 @@ import brainImage from "../assets/mlClassification.png";
 import seamImage from "../assets/seamCarving.png";
 import scheduleImage from "../assets/uvaSchedule.png";
 import portfolioImage from "../assets/portfolio.png";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Github } from "lucide-react";
 // Data for projects
 const projects = [
   {
@@ -57,47 +59,70 @@ function Projects() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
               Projects
             </h2>
-            <p className="max-w-[900px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            <p className=" text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
               Check out some of the projects I've worked on
             </p>
           </div>
         </div>
       </div>
-      <div className="grid mt-5 grid-cols-1 mx-3 lg:grid-cols-3 gap-x-8 gap-y-12">
+      <div className="grid container grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-12 mx-auto px-12 xl:px-0">
         {projects.map((project: Project) => (
           <div
-            className="flex flex-col max-w-sm rounded shadow-lg bg-zinc-800 justify-between"
-            style={{ minHeight: "660px" }}
+            className="flex flex-col max-w-sm rounded-lg shadow-lg bg-zinc-800 justify-between"
+            // style={{ minHeight: "660px" }}
           >
             <div className="h-min">
-              <img className="w-full max-h-80" src={project.image} alt="img" />
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2 text-white">
+              <img
+                src={project.image}
+                alt="img"
+                style={{ aspectRatio: "16/9", objectFit: "fill" }}
+              />
+              <div className="px-6 pt-4">
+                <div className="text-lg font-semibold text-white">
                   {project.title}
                 </div>
-                <ul>
+                <ul className="mt-4 space-y-2 text-sm text-gray-400">
                   {project.bullets.map((bullet) => (
-                    <li className="text-gray-300 mb-2 list-disc">{bullet}</li>
+                    <li>{bullet}</li>
                   ))}
                 </ul>
               </div>
             </div>
-            <div className="px-6 pt-4 pb-2 h-min">
+            <div className="p-6 flex flex-row space-x-2">
               {project.title == "Schedule Builder Web App" && (
-                <a
-                  href="https://louslist-0ec9958be7d2.herokuapp.com/"
-                  target="_blank"
+                <Button
+                  variant="outline"
+                  size="sm"
+                  asChild
+                  className="text-zinc-300 hover:text-zinc-100 bg-zinc-800/30 border-zinc-700 hover:border-zinc-500 hover:bg-zinc-700/50 transition-colors"
                 >
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                    Demo
-                  </span>
-                </a>
+                  <a
+                    href="https://louslist-0ec9958be7d2.herokuapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2"
+                  >
+                    <span>Demo</span>
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Button>
               )}
-              <a href={project.link} target="_blank">
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  Github
-                </span>
-              </a>
+              <Button
+                variant="outline"
+                size="sm"
+                asChild
+                className="text-zinc-300 hover:text-zinc-100 bg-zinc-800/30 border-zinc-700 hover:border-zinc-500 hover:bg-zinc-700/50 transition-colors"
+              >
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2"
+                >
+                  <Github className="h-4 w-4" />
+                  <span>GitHub</span>
+                </a>
+              </Button>
             </div>
           </div>
         ))}
