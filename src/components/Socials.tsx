@@ -64,7 +64,7 @@ function Socials() {
           Email
         </a>
         <a
-          href="https://drive.google.com/file/d/1Z9jMAlcQclmD43QNLHjB-GdLohiiez-z/view?usp=sharing"
+          href="https://drive.google.com/file/d/1dgSB1Fw26O2j5ZLHFE6ri83aii2NCOXu/view?usp=sharing"
           target="_blank"
           className="justify-center text-center mx-2 my-4 md:my-0 flex items-center px-6 py-3 rounded-full border border-zinc-500 text-zinc-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white hover:-translate-y-1 ease-in-out duration-200"
         >
