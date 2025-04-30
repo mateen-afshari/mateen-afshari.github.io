@@ -2,7 +2,7 @@ import roommeLogo from "../assets/RoomMeLogo.png";
 import microstrategyLogo from "../assets/microstrategy.png";
 import globalTeachingProjectLogo from "../assets/globalteachingproject.jpeg";
 import vacnipLogo from "../assets/vacnip.png";
-import capitalOneLogo from "../assets/capitalone.png";
+import capitalOneLogo from "../assets/CapitalOne.png";
 import {
   Carousel,
   CarouselContent,
