@@ -74,7 +74,7 @@ const TechnologyList = () => {
       {technologies.map((tech, index) => {
         // Use useInView hook to detect when the element is in the viewport
         const [ref, inView] = useInView({
-          triggerOnce: true, // Only trigger this once
+          triggerOnce: false, // Only trigger this once
           threshold: 0.1, // Element is considered in view when 10% of it is visible
         });
 

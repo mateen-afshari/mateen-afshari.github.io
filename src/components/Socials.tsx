@@ -1,90 +1,98 @@
-function Socials() {
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { FileText, Github, Linkedin, Mail } from "lucide-react";
+
+export default function Socials() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const socialLinks = [
+    {
+      name: "Github",
+      href: "https://github.com/mateen-afshari",
+      icon: Github,
+      color: "group-hover:text-[#333]",
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/mateen-afshari-90598022b/",
+      icon: Linkedin,
+      color: "group-hover:text-[#0077b5]",
+    },
+    {
+      name: "Email",
+      href: "mailto:ma8dc@virgina.edu",
+      icon: Mail,
+      color: "group-hover:text-[#ea4335]",
+    },
+    {
+      name: "Resume",
+      href: "https://drive.google.com/file/d/1dgSB1Fw26O2j5ZLHFE6ri83aii2NCOXu/view?usp=sharing",
+      icon: FileText,
+      color: "group-hover:text-[#4285f4]",
+    },
+  ];
+
   return (
-    <div className=" mx-auto flex flex-col justify-center min-h-screen">
-      <div className="pb-8 text-center">
-        <h2 className="text-5xl pt-1 text-zinc-100 font-bold">Socials</h2>
+    <section className="w-full py-12 md:py-24 ">
+      <div className="container px-4 md:px-6 mx-auto">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="space-y-2">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+              Connect With Me
+            </h2>
+            <p className="mx-auto max-w-[700px] text-zinc-400 md:text-xl">
+              Find me on these platforms and get in touch
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-8">
+            {socialLinks.map((social, index) => (
+              <motion.div
+                key={social.name}
+                className="relative"
+                onHoverStart={() => setHoveredIndex(index)}
+                onHoverEnd={() => setHoveredIndex(null)}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col items-center justify-center p-4 h-full w-full"
+                >
+                  <div className="relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-zinc-800 border border-zinc-700 group-hover:border-blue-500 group-hover:bg-white transition-all duration-300 ease-out">
+                    <social.icon
+                      className={`w-7 h-7 md:w-8 md:h-8 text-zinc-400 transition-all duration-300 ${social.color}`}
+                    />
+
+                    {hoveredIndex === index && (
+                      <motion.div
+                        layoutId="hoverBackground"
+                        className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 opacity-20"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 0.2 }}
+                        transition={{ duration: 0.2 }}
+                      />
+                    )}
+                  </div>
+
+                  <span className="mt-3 text-sm md:text-base font-medium text-zinc-300 group-hover:text-blue-400 transition-colors duration-300">
+                    {social.name}
+                  </span>
+                </a>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-8 pt-8 border-t border-zinc-800 w-full max-w-md">
+            <p className="text-zinc-500 text-sm">
+              Let's collaborate on something amazing
+            </p>
+          </div>
+        </div>
       </div>
-      <div className="my-12 flex flex-col md:flex-row justify-center">
-        <a
-          href="https://github.com/mateen-afshari"
-          target="_blank"
-          className="justify-center text-center mx-2 my-4 md:my-0 flex items-center px-6 py-3 rounded-full border border-zinc-500 text-zinc-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white hover:-translate-y-1 ease-in-out duration-200"
-        >
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 496 512"
-            className="mr-3"
-            height="20"
-            width="20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
-          </svg>
-          Github
-        </a>
-        <a
-          href="https://www.linkedin.com/in/mateen-afshari-90598022b/"
-          target="_blank"
-          className="justify-center text-center mx-2 my-4 md:my-0 flex items-center px-6 py-3 rounded-full border border-zinc-500 text-zinc-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white hover:-translate-y-1 ease-in-out duration-200"
-        >
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 448 512"
-            className="mr-3"
-            height="20"
-            width="20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
-          </svg>
-          LinkedIn
-        </a>
-        <a
-          href="mailto:ma8dc@virgina.edu"
-          target="_blank"
-          className="justify-center text-center mx-2 my-4 md:my-0 flex items-center px-6 py-3 rounded-full border border-zinc-500 text-zinc-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white hover:-translate-y-1 ease-in-out duration-200"
-        >
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            className="mr-3"
-            height="20"
-            width="20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path fill="none" d="M0 0h24v24H0z"></path>
-            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
-          </svg>
-          Email
-        </a>
-        <a
-          href="https://drive.google.com/file/d/1dgSB1Fw26O2j5ZLHFE6ri83aii2NCOXu/view?usp=sharing"
-          target="_blank"
-          className="justify-center text-center mx-2 my-4 md:my-0 flex items-center px-6 py-3 rounded-full border border-zinc-500 text-zinc-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white hover:-translate-y-1 ease-in-out duration-200"
-        >
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 1024 1024"
-            className="mr-3"
-            height="20"
-            width="20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M854.6 288.7c6 6 9.4 14.1 9.4 22.6V928c0 17.7-14.3 32-32 32H192c-17.7 0-32-14.3-32-32V96c0-17.7 14.3-32 32-32h424.7c8.5 0 16.7 3.4 22.7 9.4l215.2 215.3zM790.2 326L602 137.8V326h188.2zM512 566.1l52.81 197a12 12 0 0 0 11.6 8.9h31.77a12 12 0 0 0 11.6-8.88l74.37-276a12 12 0 0 0 .4-3.12 12 12 0 0 0-12-12h-35.57a12 12 0 0 0-11.7 9.31l-45.78 199.1-49.76-199.32A12 12 0 0 0 528.1 472h-32.2a12 12 0 0 0-11.64 9.1L434.6 680.01 388.5 481.3a12 12 0 0 0-11.68-9.29h-35.39a12 12 0 0 0-3.11.41 12 12 0 0 0-8.47 14.7l74.17 276A12 12 0 0 0 415.6 772h31.99a12 12 0 0 0 11.59-8.9l52.81-197z"></path>
-          </svg>
-          Resume
-        </a>
-      </div>
-    </div>
+    </section>
   );
 }
-
-export default Socials;

@@ -28,7 +28,7 @@ function App() {
         <section id="projects" className="min-h-screen">
           <Projects />
         </section>
-        <section id="socials" className="min-h-screen">
+        <section id="socials" className="min-h-screen flex items-center">
           <Socials />
         </section>
       </div>
