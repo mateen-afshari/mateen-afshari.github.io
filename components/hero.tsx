@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import type { CSSProperties } from "react";
 import { GithubIcon, LinkedinIcon } from "@/components/social-icons";
 import { TerminalCard } from "@/components/terminal-card";
+import Image from "next/image";
 
 const GITHUB_URL = "https://github.com/mateen-afshari";
 const LINKEDIN_URL = "https://www.linkedin.com/in/mateen-afshari-90598022b/";
@@ -54,11 +55,22 @@ export function Hero() {
               className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-border bg-secondary text-sm text-muted-foreground"
               aria-hidden="true"
             >
-              MA
+              <Image
+                src="/profile.jpeg"
+                alt="MA"
+                width={56}
+                height={56}
+                className="rounded-full object-cover"
+              />
             </div>
-            <p className="font-mono text-xs tracking-[0.3em] text-primary uppercase">
-              Mateen Afshari
-            </p>
+            <div>
+              <p className="font-mono text-lg text-primary uppercase sm:text-xl">
+                Mateen Afshari
+              </p>
+              <p className="font-mono text-sm text-muted-foreground">
+                Software Engineer
+              </p>
+            </div>
           </div>
 
           <h1
