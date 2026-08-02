@@ -89,27 +89,26 @@ export function WorkExperience() {
         </p>
       </ScrollReveal>
 
-      <ol className="mt-16 border-l border-border">
+      <ol className="mt-16 space-y-5 border-l border-white/10">
         {EXPERIENCES.map((exp, i) => (
           <ScrollReveal
             key={exp.company}
             as="li"
             delay={i * 80}
-            className="relative pb-14 pl-8 last:pb-0 sm:pl-12"
+            className="relative pl-8 last:pb-0 sm:pl-12"
           >
-            {/* Timeline marker */}
             <span
               aria-hidden="true"
-              className="absolute top-1.5 -left-[5px] size-[9px] rounded-full border border-primary bg-background"
+              className="absolute top-2.5 -left-[5px] size-[9px] rounded-full border border-primary bg-background"
             />
 
-            <article className="grid gap-6 sm:grid-cols-[auto_1fr]">
+            <article className="glass-panel rounded-[1.5rem] p-6 sm:grid sm:grid-cols-[auto_1fr] sm:gap-6">
               <Image
                 src={exp.logo || "/placeholder.svg"}
                 alt={`${exp.company} logo`}
                 width={56}
                 height={56}
-                className="size-14 shrink-0 rounded-md border border-border object-cover"
+                className="size-14 shrink-0 rounded-xl border border-white/10 object-cover"
               />
               <div>
                 <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">

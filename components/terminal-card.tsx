@@ -46,20 +46,18 @@ export function TerminalCard() {
   return (
     <div
       aria-hidden="true"
-      className="w-full rounded-lg border border-border bg-card/80 backdrop-blur-sm"
+      className="w-full overflow-hidden rounded-[1.35rem] border border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(95,196,255,0.18),_transparent_45%),linear-gradient(145deg,rgba(15,23,42,0.95),rgba(2,6,23,0.95))]"
     >
-      {/* Title bar */}
-      <div className="flex items-center gap-2 border-b border-border px-4 py-3">
-        <span className="size-2.5 rounded-full bg-primary/60" />
-        <span className="size-2.5 rounded-full bg-muted-foreground/25" />
-        <span className="size-2.5 rounded-full bg-muted-foreground/40" />
-        <span className="ml-3 font-mono text-xs tracking-widest text-muted-foreground uppercase">
+      <div className="flex items-center gap-2 border-b border-white/10 bg-white/5 px-4 py-3">
+        <span className="size-2.5 rounded-full bg-primary/70" />
+        <span className="size-2.5 rounded-full bg-white/25" />
+        <span className="size-2.5 rounded-full bg-white/40" />
+        <span className="ml-3 font-mono text-[11px] tracking-[0.3em] text-muted-foreground uppercase">
           mateen — zsh
         </span>
       </div>
 
-      {/* Body */}
-      <div className="min-h-64 px-4 py-4 font-mono text-[13px] leading-relaxed sm:px-5">
+      <div className="min-h-72 px-4 py-4 font-mono text-[13px] leading-relaxed sm:px-5">
         {LINES.slice(0, lineIndex + 1).map((line, i) => {
           const isCurrent = i === lineIndex;
           const text = isCurrent ? line.text.slice(0, charIndex) : line.text;
