@@ -53,14 +53,14 @@ export function About() {
               delay={i * 100}
               className="grid gap-3 py-8 first:pt-0 last:pb-0 sm:grid-cols-[10rem_1fr] sm:gap-6"
             >
-              <h3 className="font-mono text-xs leading-6 tracking-[0.2em] text-muted-foreground uppercase">
+              <h3 className="font-mono text-[10px] leading-6 tracking-[0.2em] text-muted-foreground uppercase sm:text-xs">
                 {group.label}
               </h3>
               <ul className="flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
                   <li
                     key={skill}
-                    className="rounded-md border border-border px-3 py-1.5 font-mono text-sm text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                    className="rounded-full border border-border/70 bg-white/[0.02] px-3 py-1.5 font-mono text-sm text-foreground transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-primary/40 hover:text-primary"
                   >
                     {skill}
                   </li>

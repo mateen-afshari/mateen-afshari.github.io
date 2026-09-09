@@ -46,20 +46,18 @@ export function TerminalCard() {
   return (
     <div
       aria-hidden="true"
-      className="w-full rounded-lg border border-border bg-card/80 backdrop-blur-sm"
+      className="glass-panel w-full overflow-hidden rounded-[1.5rem]"
     >
-      {/* Title bar */}
-      <div className="flex items-center gap-2 border-b border-border px-4 py-3">
-        <span className="size-2.5 rounded-full bg-primary/60" />
-        <span className="size-2.5 rounded-full bg-muted-foreground/25" />
-        <span className="size-2.5 rounded-full bg-muted-foreground/40" />
-        <span className="ml-3 font-mono text-xs tracking-widest text-muted-foreground uppercase">
+      <div className="flex items-center gap-2 border-b border-white/10 bg-white/[0.02] px-4 py-3">
+        <span className="size-2.5 rounded-full bg-primary/70" />
+        <span className="size-2.5 rounded-full bg-muted-foreground/35" />
+        <span className="size-2.5 rounded-full bg-muted-foreground/50" />
+        <span className="ml-3 font-mono text-[10px] tracking-[0.24em] text-muted-foreground uppercase">
           mateen — zsh
         </span>
       </div>
 
-      {/* Body */}
-      <div className="min-h-64 px-4 py-4 font-mono text-[13px] leading-relaxed sm:px-5">
+      <div className="min-h-64 bg-[radial-gradient(circle_at_top,rgba(255,175,124,0.08),transparent_25%)] px-4 py-4 font-mono text-[13px] leading-relaxed sm:px-5">
         {LINES.slice(0, lineIndex + 1).map((line, i) => {
           const isCurrent = i === lineIndex;
           const text = isCurrent ? line.text.slice(0, charIndex) : line.text;
